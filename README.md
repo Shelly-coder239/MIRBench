@@ -72,3 +72,6 @@ If you use the MIR benchmark or its methods, please cite:
 }
 ```
 
+### References
+This project references the following repository:  
+[AHa_Meta_Cognitive](https://github.com/Winnie-Lian/AHa_Meta_Cognitive)
