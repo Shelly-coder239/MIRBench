@@ -2,6 +2,8 @@ import json
 import os
 import re
 
+
+
 def replace_image(match):
     """
     Replace image pattern with incremented index.
@@ -88,6 +90,7 @@ def normal_data_transform(item, epoch=4):
     return {"messages": messages, "images": item["images"]}
 
 
+
 def format_captions(captions, prefix=""):
     """
     Helper to format single or multiple image captions.
@@ -99,6 +102,7 @@ def format_captions(captions, prefix=""):
     else:
         text += captions + "\n"
     return text
+
 
 
 def build_context(item, include_reasoning=False, up_to=None):
@@ -120,11 +124,30 @@ def build_context(item, include_reasoning=False, up_to=None):
     return ctx
 
 
+
 # Example usage
 if __name__ == "__main__":
     with open("/groups/g900403/home/share/zjy/datasets/final_data/train_test_split/hard_train_clean.json", "r") as f:
         data = json.load(f)
 
+
     # Test single transformation
     example = normal_data_transform(data[0], epoch=4)
     print(json.dumps(example, indent=2, ensure_ascii=False))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
