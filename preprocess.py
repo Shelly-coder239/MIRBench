@@ -2,6 +2,8 @@ import json
 import os
 import re
 
+
+
 def replace_image(match):
     """
     Replace image pattern with incremented index.
@@ -126,6 +128,7 @@ def normal_data_transform(item, epoch=4):
     return {"messages": messages, "images": images}
 
 
+
 def format_captions(captions, prefix=""):
     """
     Helper to format single or multiple image captions.
@@ -147,6 +150,7 @@ def format_captions(captions, prefix=""):
         parts.extend([captions, "\n"])
     
     return "".join(parts)
+
 
 
 def build_context(item, include_reasoning=False, up_to=None):
@@ -174,6 +178,7 @@ def build_context(item, include_reasoning=False, up_to=None):
         parts.extend([item["reasoning"], "\n"])
     
     return "".join(parts)
+
 
 
 # Example usage
